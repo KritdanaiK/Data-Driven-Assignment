@@ -1,0 +1,4 @@
+*** Test cases ***,${username},${password},${expected_msg}
+TC-01 Login success,kritdanai.k@gmail.com,12345678Gth.,Login successfully
+TC-02 Login without username,${empty},12345678Gth.,Login Failed
+TC-03 Login with no match password,kritdanai.k@gmail.com,123,Login Failed

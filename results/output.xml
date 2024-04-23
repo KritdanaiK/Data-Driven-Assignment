@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on darwin)" generated="2024-04-23T15:58:35.148337" rpa="false" schemaversion="5">
+<suite id="s1" name="Login-Test" source="/Users/kritdanai.k/Documents/Data-Driven-Assignment/Data-Driven-Assignment/login-test.robot">
+<test id="s1-t1" name="TC-01 Login success" line="24">
+<kw name="Login">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-23T15:58:35.235798" level="INFO">Opening browser 'gc' to base url 'https://training-platform.doppio-tech.com/Login'.</msg>
+<arg>${url}</arg>
+<arg>gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-23T15:58:35.235714" elapsed="1.320614"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-23T15:58:36.557209" level="INFO">Typing text 'kritdanai.k@gmail.com' into text field '//input[contains(@type, 'text')]'.</msg>
+<arg>${username_path}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-23T15:58:36.556788" elapsed="0.096846"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-23T15:58:36.653978" level="INFO">Typing text '12345678Gth.' into text field '//input[contains(@type, 'password')]'.</msg>
+<arg>${password_path}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-23T15:58:36.653821" elapsed="0.037478"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-23T15:58:36.691601" level="INFO">Clicking button '//button[contains(@type, 'submit')]'.</msg>
+<arg>${login_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-23T15:58:36.691424" elapsed="0.028492"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${msg}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-04-23T15:58:36.720039" elapsed="0.220168"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-23T15:58:36.940480" level="INFO">Verifying element '//div[contains(@class, 'ant-modal-confirm-content')]' contains exact text 'Login successfully'.</msg>
+<arg>${msg}</arg>
+<arg>${expected_msg}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-04-23T15:58:36.940331" elapsed="0.009956"/>
+</kw>
+<arg>username=kritdanai.k@gmail.com</arg>
+<arg>password=12345678Gth.</arg>
+<arg>expected_msg=Login successfully</arg>
+<status status="PASS" start="2024-04-23T15:58:35.235393" elapsed="1.714977"/>
+</kw>
+<status status="PASS" start="2024-04-23T15:58:35.234956" elapsed="1.715575"/>
+</test>
+<test id="s1-t2" name="TC-02 Login without username" line="24">
+<kw name="Login">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-23T15:58:36.951833" level="INFO">Opening browser 'gc' to base url 'https://training-platform.doppio-tech.com/Login'.</msg>
+<arg>${url}</arg>
+<arg>gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-23T15:58:36.951742" elapsed="1.229710"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-23T15:58:38.181999" level="INFO">Typing text '' into text field '//input[contains(@type, 'text')]'.</msg>
+<arg>${username_path}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-23T15:58:38.181706" elapsed="0.034774"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-23T15:58:38.216719" level="INFO">Typing text '12345678Gth.' into text field '//input[contains(@type, 'password')]'.</msg>
+<arg>${password_path}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-23T15:58:38.216581" elapsed="0.089418"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-23T15:58:38.306286" level="INFO">Clicking button '//button[contains(@type, 'submit')]'.</msg>
+<arg>${login_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-23T15:58:38.306148" elapsed="0.027782"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${msg}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-04-23T15:58:38.334168" elapsed="0.222173"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-23T15:58:38.556629" level="INFO">Verifying element '//div[contains(@class, 'ant-modal-confirm-content')]' contains exact text 'Login Failed'.</msg>
+<arg>${msg}</arg>
+<arg>${expected_msg}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-04-23T15:58:38.556469" elapsed="0.009680"/>
+</kw>
+<arg>username=${empty}</arg>
+<arg>password=12345678Gth.</arg>
+<arg>expected_msg=Login Failed</arg>
+<status status="PASS" start="2024-04-23T15:58:36.951297" elapsed="1.614960"/>
+</kw>
+<status status="PASS" start="2024-04-23T15:58:36.950692" elapsed="1.615722"/>
+</test>
+<test id="s1-t3" name="TC-03 Login with no match password" line="24">
+<kw name="Login">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-23T15:58:38.567434" level="INFO">Opening browser 'gc' to base url 'https://training-platform.doppio-tech.com/Login'.</msg>
+<arg>${url}</arg>
+<arg>gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-23T15:58:38.567337" elapsed="1.197394"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-23T15:58:39.765204" level="INFO">Typing text 'kritdanai.k@gmail.com' into text field '//input[contains(@type, 'text')]'.</msg>
+<arg>${username_path}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-23T15:58:39.764979" elapsed="0.094365"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-23T15:58:39.859645" level="INFO">Typing text '123' into text field '//input[contains(@type, 'password')]'.</msg>
+<arg>${password_path}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-23T15:58:39.859470" elapsed="0.031742"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-23T15:58:39.891439" level="INFO">Clicking button '//button[contains(@type, 'submit')]'.</msg>
+<arg>${login_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-23T15:58:39.891323" elapsed="0.027845"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${msg}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-04-23T15:58:39.919289" elapsed="0.220452"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-23T15:58:40.140013" level="INFO">Verifying element '//div[contains(@class, 'ant-modal-confirm-content')]' contains exact text 'Login Failed'.</msg>
+<arg>${msg}</arg>
+<arg>${expected_msg}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-04-23T15:58:40.139863" elapsed="0.015463"/>
+</kw>
+<arg>username=kritdanai.k@gmail.com</arg>
+<arg>password=123</arg>
+<arg>expected_msg=Login Failed</arg>
+<status status="PASS" start="2024-04-23T15:58:38.567161" elapsed="1.588264"/>
+</kw>
+<status status="PASS" start="2024-04-23T15:58:38.566573" elapsed="1.588994"/>
+</test>
+<status status="PASS" start="2024-04-23T15:58:35.148823" elapsed="5.006953"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Login-Test">Login-Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
