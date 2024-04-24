@@ -1,151 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on darwin)" generated="2024-04-23T15:58:35.148337" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.3 on darwin)" generated="2024-04-24T10:12:23.619037" rpa="false" schemaversion="5">
 <suite id="s1" name="Login-Test" source="/Users/kritdanai.k/Documents/Data-Driven-Assignment/Data-Driven-Assignment/login-test.robot">
 <test id="s1-t1" name="TC-01 Login success" line="24">
 <kw name="Login">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-23T15:58:35.235798" level="INFO">Opening browser 'gc' to base url 'https://training-platform.doppio-tech.com/Login'.</msg>
+<msg time="2024-04-24T10:12:23.705488" level="INFO">Opening browser 'gc' to base url 'https://training-platform.doppio-tech.com/Login'.</msg>
 <arg>${url}</arg>
 <arg>gc</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-23T15:58:35.235714" elapsed="1.320614"/>
+<status status="PASS" start="2024-04-24T10:12:23.705404" elapsed="1.205200"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-23T15:58:36.557209" level="INFO">Typing text 'kritdanai.k@gmail.com' into text field '//input[contains(@type, 'text')]'.</msg>
+<msg time="2024-04-24T10:12:24.911450" level="INFO">Typing text 'kritdanai.k@gmail.com' into text field '//div[div[label[@title='Username']]]//input'.</msg>
 <arg>${username_path}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-23T15:58:36.556788" elapsed="0.096846"/>
+<status status="PASS" start="2024-04-24T10:12:24.911051" elapsed="0.094978"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-23T15:58:36.653978" level="INFO">Typing text '12345678Gth.' into text field '//input[contains(@type, 'password')]'.</msg>
+<msg time="2024-04-24T10:12:25.006344" level="INFO">Typing text '12345678Gth.' into text field '//div[div[label[@title='Password']]]//input'.</msg>
 <arg>${password_path}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-23T15:58:36.653821" elapsed="0.037478"/>
+<status status="PASS" start="2024-04-24T10:12:25.006163" elapsed="0.035746"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-04-23T15:58:36.691601" level="INFO">Clicking button '//button[contains(@type, 'submit')]'.</msg>
+<msg time="2024-04-24T10:12:25.042156" level="INFO">Clicking button '//button[span[text()='Login']]'.</msg>
 <arg>${login_btn}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-23T15:58:36.691424" elapsed="0.028492"/>
+<status status="PASS" start="2024-04-24T10:12:25.042023" elapsed="0.027142"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${msg}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-23T15:58:36.720039" elapsed="0.220168"/>
+<status status="PASS" start="2024-04-24T10:12:25.069300" elapsed="0.222724"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-04-23T15:58:36.940480" level="INFO">Verifying element '//div[contains(@class, 'ant-modal-confirm-content')]' contains exact text 'Login successfully'.</msg>
+<msg time="2024-04-24T10:12:25.292319" level="INFO">Verifying element '//div[@class='ant-modal-confirm-content']' contains exact text 'Login successfully'.</msg>
 <arg>${msg}</arg>
 <arg>${expected_msg}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-04-23T15:58:36.940331" elapsed="0.009956"/>
+<status status="PASS" start="2024-04-24T10:12:25.292151" elapsed="0.010228"/>
 </kw>
 <arg>username=kritdanai.k@gmail.com</arg>
 <arg>password=12345678Gth.</arg>
 <arg>expected_msg=Login successfully</arg>
-<status status="PASS" start="2024-04-23T15:58:35.235393" elapsed="1.714977"/>
+<status status="PASS" start="2024-04-24T10:12:23.705089" elapsed="1.597388"/>
 </kw>
-<status status="PASS" start="2024-04-23T15:58:35.234956" elapsed="1.715575"/>
+<status status="PASS" start="2024-04-24T10:12:23.704648" elapsed="1.598006"/>
 </test>
 <test id="s1-t2" name="TC-02 Login without username" line="24">
 <kw name="Login">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-23T15:58:36.951833" level="INFO">Opening browser 'gc' to base url 'https://training-platform.doppio-tech.com/Login'.</msg>
+<msg time="2024-04-24T10:12:25.304063" level="INFO">Opening browser 'gc' to base url 'https://training-platform.doppio-tech.com/Login'.</msg>
 <arg>${url}</arg>
 <arg>gc</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-23T15:58:36.951742" elapsed="1.229710"/>
+<status status="PASS" start="2024-04-24T10:12:25.303955" elapsed="1.202200"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-23T15:58:38.181999" level="INFO">Typing text '' into text field '//input[contains(@type, 'text')]'.</msg>
+<msg time="2024-04-24T10:12:26.506687" level="INFO">Typing text '' into text field '//div[div[label[@title='Username']]]//input'.</msg>
 <arg>${username_path}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-23T15:58:38.181706" elapsed="0.034774"/>
+<status status="PASS" start="2024-04-24T10:12:26.506453" elapsed="0.037001"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-23T15:58:38.216719" level="INFO">Typing text '12345678Gth.' into text field '//input[contains(@type, 'password')]'.</msg>
+<msg time="2024-04-24T10:12:26.543722" level="INFO">Typing text '12345678Gth.' into text field '//div[div[label[@title='Password']]]//input'.</msg>
 <arg>${password_path}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-23T15:58:38.216581" elapsed="0.089418"/>
+<status status="PASS" start="2024-04-24T10:12:26.543569" elapsed="0.086657"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-04-23T15:58:38.306286" level="INFO">Clicking button '//button[contains(@type, 'submit')]'.</msg>
+<msg time="2024-04-24T10:12:26.630470" level="INFO">Clicking button '//button[span[text()='Login']]'.</msg>
 <arg>${login_btn}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-23T15:58:38.306148" elapsed="0.027782"/>
+<status status="PASS" start="2024-04-24T10:12:26.630344" elapsed="0.030093"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${msg}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-23T15:58:38.334168" elapsed="0.222173"/>
+<status status="PASS" start="2024-04-24T10:12:26.660558" elapsed="0.217150"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-04-23T15:58:38.556629" level="INFO">Verifying element '//div[contains(@class, 'ant-modal-confirm-content')]' contains exact text 'Login Failed'.</msg>
+<msg time="2024-04-24T10:12:26.877996" level="INFO">Verifying element '//div[@class='ant-modal-confirm-content']' contains exact text 'Login Failed'.</msg>
 <arg>${msg}</arg>
 <arg>${expected_msg}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-04-23T15:58:38.556469" elapsed="0.009680"/>
+<status status="PASS" start="2024-04-24T10:12:26.877832" elapsed="0.010033"/>
 </kw>
 <arg>username=${empty}</arg>
 <arg>password=12345678Gth.</arg>
 <arg>expected_msg=Login Failed</arg>
-<status status="PASS" start="2024-04-23T15:58:36.951297" elapsed="1.614960"/>
+<status status="PASS" start="2024-04-24T10:12:25.303466" elapsed="1.584503"/>
 </kw>
-<status status="PASS" start="2024-04-23T15:58:36.950692" elapsed="1.615722"/>
+<status status="PASS" start="2024-04-24T10:12:25.302822" elapsed="1.585304"/>
 </test>
 <test id="s1-t3" name="TC-03 Login with no match password" line="24">
 <kw name="Login">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-23T15:58:38.567434" level="INFO">Opening browser 'gc' to base url 'https://training-platform.doppio-tech.com/Login'.</msg>
+<msg time="2024-04-24T10:12:26.889199" level="INFO">Opening browser 'gc' to base url 'https://training-platform.doppio-tech.com/Login'.</msg>
 <arg>${url}</arg>
 <arg>gc</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-23T15:58:38.567337" elapsed="1.197394"/>
+<status status="PASS" start="2024-04-24T10:12:26.889102" elapsed="1.214201"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-23T15:58:39.765204" level="INFO">Typing text 'kritdanai.k@gmail.com' into text field '//input[contains(@type, 'text')]'.</msg>
+<msg time="2024-04-24T10:12:28.103865" level="INFO">Typing text 'kritdanai.k@gmail.com' into text field '//div[div[label[@title='Username']]]//input'.</msg>
 <arg>${username_path}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-23T15:58:39.764979" elapsed="0.094365"/>
+<status status="PASS" start="2024-04-24T10:12:28.103610" elapsed="0.097727"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-23T15:58:39.859645" level="INFO">Typing text '123' into text field '//input[contains(@type, 'password')]'.</msg>
+<msg time="2024-04-24T10:12:28.201568" level="INFO">Typing text '123' into text field '//div[div[label[@title='Password']]]//input'.</msg>
 <arg>${password_path}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-23T15:58:39.859470" elapsed="0.031742"/>
+<status status="PASS" start="2024-04-24T10:12:28.201440" elapsed="0.033009"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-04-23T15:58:39.891439" level="INFO">Clicking button '//button[contains(@type, 'submit')]'.</msg>
+<msg time="2024-04-24T10:12:28.234679" level="INFO">Clicking button '//button[span[text()='Login']]'.</msg>
 <arg>${login_btn}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-23T15:58:39.891323" elapsed="0.027845"/>
+<status status="PASS" start="2024-04-24T10:12:28.234561" elapsed="0.026182"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${msg}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-23T15:58:39.919289" elapsed="0.220452"/>
+<status status="PASS" start="2024-04-24T10:12:28.260851" elapsed="0.219149"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-04-23T15:58:40.140013" level="INFO">Verifying element '//div[contains(@class, 'ant-modal-confirm-content')]' contains exact text 'Login Failed'.</msg>
+<msg time="2024-04-24T10:12:28.480299" level="INFO">Verifying element '//div[@class='ant-modal-confirm-content']' contains exact text 'Login Failed'.</msg>
 <arg>${msg}</arg>
 <arg>${expected_msg}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-04-23T15:58:40.139863" elapsed="0.015463"/>
+<status status="PASS" start="2024-04-24T10:12:28.480128" elapsed="0.007970"/>
 </kw>
 <arg>username=kritdanai.k@gmail.com</arg>
 <arg>password=123</arg>
 <arg>expected_msg=Login Failed</arg>
-<status status="PASS" start="2024-04-23T15:58:38.567161" elapsed="1.588264"/>
+<status status="PASS" start="2024-04-24T10:12:26.888920" elapsed="1.599250"/>
 </kw>
-<status status="PASS" start="2024-04-23T15:58:38.566573" elapsed="1.588994"/>
+<status status="PASS" start="2024-04-24T10:12:26.888284" elapsed="1.600024"/>
 </test>
-<status status="PASS" start="2024-04-23T15:58:35.148823" elapsed="5.006953"/>
+<status status="PASS" start="2024-04-24T10:12:23.619539" elapsed="4.868983"/>
 </suite>
 <statistics>
 <total>
