@@ -5,9 +5,9 @@ Test Template    Login
 
 *** Variables ***
 ${url}    https://training-platform.doppio-tech.com/Login
-${username_path}    //input[@type='text']
-${password_path}    //input[@type='password']
-${login_btn}    //button[@type='submit']
+${username_path}    //div[div[label[@title='Username']]]//input
+${password_path}    //div[div[label[@title='Password']]]//input
+${login_btn}    //button[span[text()='Login']]
 ${msg}    //div[@class='ant-modal-confirm-content']
 
 *** Keywords ***
